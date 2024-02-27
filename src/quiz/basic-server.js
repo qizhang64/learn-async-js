@@ -46,6 +46,10 @@ const server = http.createServer((req, res) => {
                 return incident.id === `MABOS00${id}`
             })));
         }
+        else {
+            res.writeHead(400, { 'Content-Type': 'text/plain' });
+            res.end('Missing parameters in the URL');
+        }
     } else {
         // If the request is for an unsupported endpoint, send a not found response
         res.writeHead(404, { 'Content-Type': 'text/plain' });
@@ -56,3 +60,5 @@ const server = http.createServer((req, res) => {
 server.listen(port, hostname, () => {
     console.log(`Server running at http://${hostname}:${port}/`);
 })
+
+// http://localhost:8000/incidents/A90/stonehaven/north/1
