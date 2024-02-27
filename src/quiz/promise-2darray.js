@@ -1,5 +1,5 @@
 function sum2DArray(arr) {
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve, reject) => { // need to tell which condition we are on
         console.log('Sum called ... ');
         if(Array.isArray(arr)) {
             setTimeout(() => {
@@ -15,7 +15,7 @@ function sum2DArray(arr) {
         }
         else {
             console.log('rejecting ... ');
-            reject('BAD INPUT: Expected array as input');
+            reject('BAD INPUT: Expected array as input'); // if it is not an array
         }
         console.log('returning from sum');
     });
@@ -29,7 +29,13 @@ const array2D = [
 ];
 
 const sumPromise1 = sum2DArray(array2D);
-console.log(sumPromise1);
+sumPromise1
+    .then((res) => console.log(res))
+    .catch((err) => console.log(err));
+// console.log(sumPromise1);
 
-const sumPromise2 = sum2DArray('array2D');
-console.log(sumPromise2);
+const sumPromise2 = sum2DArray('array2D'); // rejected before result1 gets results, because result1 needs more time to execute
+sumPromise2
+    .then((res) => console.log(res))
+    .catch((err) => console.log(err));
+// console.log(sumPromise2);

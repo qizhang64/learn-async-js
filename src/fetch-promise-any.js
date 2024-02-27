@@ -8,7 +8,7 @@ const fetchPromise1 = fetch(
     "file://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json",
   );
   
-  Promise.any([fetchPromise1, fetchPromise2, fetchPromise3])
+  Promise.any([fetchPromise1, fetchPromise2, fetchPromise3]) // return the first Promise that get the result
     .then((response) => {
         console.log(`${response.url}: ${response.status}`);
     })

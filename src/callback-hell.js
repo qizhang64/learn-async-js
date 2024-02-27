@@ -13,7 +13,8 @@ function doStep1(init, callback) {
     callback(result);
   }
   
-  function doOperation() {
+  // e.g., open a file, call a function; then within that call may need to open another file
+  function doOperation() { // we want to call inside, not sequentially
     doStep1(0, (result1) => {
       doStep2(result1, (result2) => {
         doStep3(result2, (result3) => {

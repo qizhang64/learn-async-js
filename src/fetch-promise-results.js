@@ -3,12 +3,12 @@ const fetchPromise = fetch(
 );
 
 fetchPromise.then((response) => {
-  const jsonPromise = response.json();
-  jsonPromise.then((products) => {
+  const jsonPromise = response.json(); // return json data with a return of promise object not value
+  jsonPromise.then((products) => { // dependency: we have a Promise in the first
     products.forEach(product => {
       console.log(product.name);
     });
   });
 });
 
-console.log('Fetching products ... ');
+console.log('Fetching products ... '); // main

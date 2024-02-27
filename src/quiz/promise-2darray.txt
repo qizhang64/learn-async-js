@@ -1,1 +1,5 @@
 Explain the code execution based on the order of the messages logged in src/quiz/promise-2darray.txt.
+
+The function will tell which condition is on, resolve with the result, or reject with an error.
+If the input is not an array, it will directly reject and return an error.
+If the inout is an array, it will add the sum of the array and return resolve.

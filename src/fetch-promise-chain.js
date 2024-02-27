@@ -3,7 +3,7 @@ const fetchPromise = fetch(
   );
   
   fetchPromise
-    .then((response) => response.json())
+    .then((response) => response.json()) // an error function always return the next block of chain
     .then((products) => {
         products.forEach(product => {
             console.log(product.name);
@@ -11,4 +11,6 @@ const fetchPromise = fetch(
     });
 
     console.log('Chaining promises ... ');
+
+// return a Promise, cannot do more until there is a block to send it to next step
   
