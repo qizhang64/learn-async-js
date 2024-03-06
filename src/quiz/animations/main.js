@@ -40,3 +40,5 @@ const aliceTumbling = [
   //             .finished;
   //   })
   //   .catch((err) => alert(`Error when promising ... ${err.message}`));
+
+  // open src/quiz/animations/index.html
