@@ -10,8 +10,8 @@ const fetchPromise4 = fetch(
   );
   
   fetchPromise4
-    .then((response: Response) => response.json() as Promise<Product[]>)
-    .then((products: Product[]) => {
+    .then((response: Response) => response.json() as Promise<Product[]>) // it will return a result, the result will be forward to next iterate -> chaining
+    .then((products: Product[]) => { // each are independent and decoupled from each other
         products.forEach((product: Product) => {
             console.log(product.name);
           });

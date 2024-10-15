@@ -6,12 +6,12 @@ const fetchPromise_1 = fetch(url1);
 const fetchPromise_2 = fetch(url2);
 const fetchPromise_3 = fetch(url3);
   
-  Promise.all([fetchPromise_1, fetchPromise_2, fetchPromise_3])
+  Promise.all([fetchPromise_1, fetchPromise_2, fetchPromise_3]) // not care about order of responses
     .then((responses: Response[]) => {
       for (const response of responses) {
         console.log(`${response.url}: ${response.status}`);
       }
     })
     .catch((error) => {
-        console.error(`Failed to fetch: ${error}`);
+        console.error(`Failed to fetch: ${error}`); // embed error call in the error
     });

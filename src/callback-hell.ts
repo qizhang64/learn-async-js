@@ -15,7 +15,7 @@ function doStep1(init: number, callback: (result: number) => void) {
     callback(result);
   }
   
-  function doOperation(init: number) {
+  function doOperation(init: number) { // step 2 not start until step 1 finished
     doStep1(init, (result1) => {
       doStep2(result1, (result2) => {
         doStep3(result2, (result3) => {

@@ -1,6 +1,6 @@
-const fetchPromise1 = fetch(
+const fetchPromise1 = fetch( // this is a REST URI
     "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json",
-  );
+  ); // return a promise
   
 console.log(fetchPromise1);
   
@@ -14,3 +14,4 @@ for (let i = 0; i < 10; i++) {
   console.log('do other things ...');
 }
   
+console.log("End of script");

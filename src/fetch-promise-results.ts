@@ -11,7 +11,7 @@ const fetchPromise2: Promise<Response> = fetch(
 
 fetchPromise2.then((response: Response) => {
   const jsonPromise = response.json() as Promise<Product[]>;
-  jsonPromise.then((products: Product[]) => {
+  jsonPromise.then((products: Product[]) => { // wait until json project is ready
     products.forEach((product: Product) => {
       console.log(product.name);
     });

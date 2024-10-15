@@ -8,7 +8,7 @@ const fetchPromise31 = fetch(url31);
   
 Promise.any([fetchPromise11, fetchPromise21, fetchPromise31])
   .then((response: Response) => {
-      console.log(`${response.url}: ${response.status}`);
+      console.log(`${response.url}: ${response.status}`); // only care about 1 response
   })
   .catch((error: any) => {
       console.error(`Failed to fetch: ${error}`);
